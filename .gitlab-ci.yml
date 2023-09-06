@@ -19,7 +19,7 @@ variables:
   # CI runs, for example when adding new packages to FDO_DISTRIBUTION_PACKAGES.
   # The tag is an arbitrary string that identifies the exact container
   # contents.
-  FDO_DISTRIBUTION_TAG: '2023-04-21-00'
+  FDO_DISTRIBUTION_TAG: '2023-08-13-00'
   FDO_DISTRIBUTION_VERSION: '20.04'
   FDO_UPSTREAM_REPO: 'pulseaudio/pulseaudio'
 
@@ -47,6 +47,7 @@ build-container:
       check
       curl
       dbus-x11
+      doxygen
       g++
       gcc
       gettext
@@ -90,14 +91,14 @@ build-meson:
   extends: .fdo.distribution-image@ubuntu
   stage: build
   script:
-    # Install meson
-    - wget -q https://github.com/mesonbuild/meson/releases/download/0.50.0/meson-0.50.0.tar.gz
-    - tar -xf meson-0.50.0.tar.gz
-    - cd meson-0.50.0
+    # Install meson (higher than our min version to support our wrap file)
+    - wget -q https://github.com/mesonbuild/meson/releases/download/0.63.2/meson-0.63.2.tar.gz
+    - tar -xf meson-0.63.2.tar.gz
+    - cd meson-0.63.2
     - python3 setup.py install
     - cd ..
     # Do the actual build
-    - meson build --werror
+    - meson build -Dwebrtc-aec=enabled
     - cd build
     - ninja
     - ulimit -c 0 # don't dump core files on tests that are supposed to assert
