@@ -11,8 +11,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.freedesktop.org/pulseaudio/pulseaudio/"
 "issues/new\n"
 "POT-Creation-Date: 2022-06-18 09:49+0300\n"
-"PO-Revision-Date: 2023-05-27 21:20+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"PO-Revision-Date: 2024-08-01 04:41+0000\n"
+"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
 "pulseaudio/pulseaudio/tr/>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: src/daemon/cmdline.c:113
 #, c-format
@@ -1706,7 +1706,7 @@ msgstr "Akış boşaltma başarısız oldu: %s"
 
 #: src/utils/pacat.c:139
 msgid "Playback stream drained."
-msgstr "Playback akışı boşaltıldı."
+msgstr "Oynatım akışı boşaltıldı."
 
 #: src/utils/pacat.c:150
 msgid "Draining connection to server."
@@ -3332,12 +3332,11 @@ msgid ""
 msgstr ""
 "%s [-D ekran] [-S sunucu] [-O alıcı] [-I kaynak] [-c dosya]  [-d|-e|-i|-r]\n"
 "\n"
-" -d    X11 ekranına bağlı geçerli PulseAudio verilerini gösterir "
-"(öntanımlı)\n"
-" -e    X11 ekranına bağlı yerel PulseAudio verilerini dışa aktarır\n"
+" -d    X11 ekranına bağlı geçerli PulseAudio verilerini göster (öntanımlı)\n"
+" -e    X11 ekranına bağlı yerel PulseAudio verilerini dışa aktar\n"
 " -i    X11 ekranından PulseAudio verilerini yerel çevresel değişkenlere ve "
-"çerez dosyalarına aktarır.\n"
-" -r    X11 ekranından PulseAudio verilerini kaldırır\n"
+"çerez dosyalarına aktar\n"
+" -r    X11 ekranından PulseAudio verilerini kaldır\n"
 
 #: src/utils/pax11publish.c:91
 #, c-format
